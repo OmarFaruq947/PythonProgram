@@ -1,16 +1,18 @@
-# This is a sample Python script.
+def linear_search(arr, a, b):
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    # Going through array
+    for i in range(0, a):
+        if (arr[i] == b):
+            return i
+    return -1
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+arr = [9, 7, 5, 3, 1]
+print("The array given is ", arr)
+b = 5
+print("Element to be found is ", b)
+a = len(arr)
+index = linear_search(arr, a, b)
+if(index == -1):
+    print("Element is not in the list")
+else:
+    print("Index of the element is: ", index)
