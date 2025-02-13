@@ -72,23 +72,3 @@ class Admin(User):
         restaurant.menu.show_menu()
 
 
-
-
-
-
-
-# admin = Admin("Omar", "1700", "omar@gmail.com", "Dhaka")
-# item1 = FoodItem("Pizza", 1200, 10)
-# item2 = FoodItem("Pizza2", 1200, 30)
-
-# admin.add_new_item(vhabir_dokan, item1)
-# admin.add_new_item(vhabir_dokan, item2)
-
-# customer1 = Customer("Rahim", "123456", "rahim@gmail.com", "Dhaka")
-# customer1.view_menu(vhabir_dokan)
-
-# item_name = input("Enter item name: ")
-# item_quantity = int(input("Enter item quantity: "))
-
-# customer1.add_to_cart(vhabir_dokan, item_name, item_quantity)
-# customer1.view_cart()

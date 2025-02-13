@@ -71,7 +71,8 @@ def admin_menu():
             age= input("Enter employee age: ")
             salary= input("Enter employee salary: ")
             address = input("Enter employee address: ")
-            admin.add_employee(name, phone, email, address, salary, age, designation)
+            employee = Employee(name, phone, email, address, salary, age, designation)
+            admin.add_employee(mamar_restaurant, employee)
 
         elif choice == 3:
             admin.view_employee(mamar_restaurant)
