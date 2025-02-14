@@ -1,13 +1,11 @@
 from school import School
-from person import Student, Teacher, Person
+from person import Student, Teacher
 from subject import Subject
 from classroom import ClassRoom
 
+school = School("ABC", "Dhaka")
 
-
-school = School("BAUET", "Dhaka")
-
-# adding class room
+# Adding Classroom
 eight = ClassRoom("Eight")
 nine = ClassRoom("Nine")
 ten = ClassRoom("Ten")
@@ -16,62 +14,41 @@ school.add_classroom(eight)
 school.add_classroom(nine)
 school.add_classroom(ten)
 
-
-# adding student
+# Adding Student
 rahim = Student("Rahim", eight)
-korim = Student("korim", nine)
-nahin = Student("Nahin", ten)
-fahim = Student("fahim", ten)
-hamim = Student("hamim", eight)
-
+karim = Student("Karim", nine)
+fahim = Student("Fahim", ten)
+hamim = Student("Hamim", ten)
 
 school.student_admission(rahim)
-school.student_admission(korim)
-school.student_admission(nahin)
+school.student_admission(karim)
 school.student_admission(fahim)
 school.student_admission(hamim)
 
-
 # Adding Teachers
-abul = Teacher("Abul khan")
-kabul = Teacher("kabul khan")
-babul = Teacher("babul khan")
+abul = Teacher("Abul Khan")
+babul = Teacher("Babul Khan")
+kabul = Teacher("Kabul Khan")
 
-
-
-# adding subjects
-
+# Adding Subjects
 bangla = Subject("Bangla", abul)
-english = Subject("English", abul)
-ict = Subject("ICT", kabul)
-physics = Subject("Physics", kabul)
-chemistry = Subject("Chemistry", babul)
-biology = Subject("Biology", babul)
-
-
+physics = Subject("Physics", babul)
+chemistry = Subject("Chemistry", kabul)
+biology = Subject("Biology", kabul)
 
 eight.add_subject(bangla)
-eight.add_subject(ict)
-eight.add_subject(english)
-
-
-nine.add_subject(bangla)
-nine.add_subject(ict)
-nine.add_subject(english)
+eight.add_subject(physics)
+eight.add_subject(chemistry)
+nine.add_subject(biology)
 nine.add_subject(physics)
 nine.add_subject(chemistry)
-nine.add_subject(biology)
-
-
-ten.add_subject(bangla)
-ten.add_subject(ict)
-ten.add_subject(english)
-ten.add_subject(physics)
 ten.add_subject(chemistry)
+ten.add_subject(physics)
+ten.add_subject(bangla)
 ten.add_subject(biology)
 
-
-
 eight.take_semester_final_exam()
+nine.take_semester_final_exam()
+ten.take_semester_final_exam()
 
 print(school)
